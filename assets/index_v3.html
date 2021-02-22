@@ -3,6 +3,7 @@
   <head>
     <title>symant233's jsproxy</title>
     <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <meta
       name="viewport"
       content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"
@@ -14,15 +15,15 @@
     <base target="_blank" />
     <style>
       body {
-        padding: 0 0.5em;
+        padding: 0 1rem;
       }
       .jsproxy-box {
-        margin-top: 1em;
+        margin-top: 1rem;
       }
       #top-form {
         width: 100%;
         box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.1);
-        margin-top: 1rem;
+        margin: 1rem 0;
       }
       #txtURL {
         border-left-color: white;
@@ -30,13 +31,40 @@
         border-bottom-left-radius: 0%;
       }
       #btnGo {
-        border-top-right-radius: 0px; border-bottom-right-radius: 0px
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
       }
       #list a {
         margin: 1em;
       }
       .hidden {
         display: none;
+      }
+      .input {
+        border-color: #dbdbdb;
+        box-shadow: none;
+      }
+      .input:hover {
+        border-color: #dbdbdb;
+      }
+      .input:focus {
+        background-color: #fff;
+        border-color: #dbdbdb;
+        color: #363636;
+        box-shadow: none;
+      }
+      .button:hover {
+        background-color: #66ad57;
+        box-shadow: none;
+        border-color: #dbdbdb;
+      }
+      .button:focus {
+        box-shadow: none;
+        border-color: #dbdbdb;
+      }
+      .button.is-focused:not(:active),
+      .button:focus:not(:active) {
+        box-shadow: none;
       }
     </style>
   </head>
@@ -46,13 +74,7 @@
       class="field is-medium has-addons"
       onsubmit="return false"
     >
-      <button
-        id="btnGo"
-        class="button is-medium"
-        type="submit"
-      >
-        🔍
-      </button>
+      <button id="btnGo" class="button is-medium" type="submit">🔍</button>
       <input
         id="txtURL"
         class="input is-medium"
